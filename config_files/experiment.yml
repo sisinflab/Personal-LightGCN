@@ -62,6 +62,6 @@ experiment:
         save_weights: False
         validation_metric: Recall@20
         restore: False
-        save_recs: True
+        save_recs: False
       svd_factors: [ 64, 128, 256, 512 ]
       alpha: [ 0.1, 0.3, 0.5, 0.7, 0.8 ]
