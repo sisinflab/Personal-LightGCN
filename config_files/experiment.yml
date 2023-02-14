@@ -13,48 +13,48 @@ experiment:
   gpu: 0
   external_models_path: ../external/models/__init__.py
   models:
-    external.LightGCN:
-      meta:
-        hyper_max_evals: 20
-        hyper_opt_alg: tpe
-        verbose: True
-        save_recs: False
-        validation_rate: 1
-        validation_metric: Recall@20
-      lr: [ loguniform, -9.210340372, -5.298317367 ]
-      epochs: 200
-      factors: 64
-      batch_size: 256
-      l_w: [ loguniform, -11.512925465, -2.30258509299 ]
-      n_layers: 3
-      seed: 123
-      early_stopping:
-        patience: 20
-        mode: auto
-        monitor: Recall@20
-        verbose: True
-    external.LightGCNP:
-      meta:
-        hyper_max_evals: 20
-        hyper_opt_alg: tpe
-        verbose: True
-        save_recs: False
-        validation_rate: 1
-        validation_metric: Recall@20
-      lr: [ loguniform, -9.210340372, -5.298317367 ]
-      epochs: 200
-      factors: 64
-      batch_size: 256
-      a: [loguniform, -2.30258509299, -0.10536051565]
-      b: [loguniform, -2.30258509299, -0.10536051565]
-      l_w: [ loguniform, -11.512925465, -2.30258509299 ]
-      n_layers: 3
-      seed: 123
-      early_stopping:
-        patience: 20
-        mode: auto
-        monitor: Recall@20
-        verbose: True
+#    external.LightGCN:
+#      meta:
+#        hyper_max_evals: 20
+#        hyper_opt_alg: tpe
+#        verbose: True
+#        save_recs: False
+#        validation_rate: 1
+#        validation_metric: Recall@20
+#      lr: [ loguniform, -9.210340372, -5.298317367 ]
+#      epochs: 200
+#      factors: 64
+#      batch_size: 256
+#      l_w: [ loguniform, -11.512925465, -2.30258509299 ]
+#      n_layers: 3
+#      seed: 123
+#      early_stopping:
+#        patience: 20
+#        mode: auto
+#        monitor: Recall@20
+#        verbose: True
+#    external.LightGCNP:
+#      meta:
+#        hyper_max_evals: 20
+#        hyper_opt_alg: tpe
+#        verbose: True
+#        save_recs: False
+#        validation_rate: 1
+#        validation_metric: Recall@20
+#      lr: [ loguniform, -9.210340372, -5.298317367 ]
+#      epochs: 200
+#      factors: 64
+#      batch_size: 256
+#      a: [loguniform, -2.30258509299, -0.10536051565]
+#      b: [loguniform, -2.30258509299, -0.10536051565]
+#      l_w: [ loguniform, -11.512925465, -2.30258509299 ]
+#      n_layers: 3
+#      seed: 123
+#      early_stopping:
+#        patience: 20
+#        mode: auto
+#        monitor: Recall@20
+#        verbose: True
     external.GFCF:
       meta:
         hyper_opt_alg: grid
