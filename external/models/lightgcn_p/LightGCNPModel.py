@@ -91,8 +91,8 @@ class LightGCNPModel(torch.nn.Module, ABC):
 
         all_embeddings = sum([all_embeddings[k] * self.alpha[k] for k in range(len(all_embeddings))])
         gu, gi = torch.split(all_embeddings, [self.num_users, self.num_items], 0)
-        gu = (self.a * gu) + ((1 - self.a) * self.Gu_p)
-        gi = (self.b * gi) + ((1 - self.b) * self.Gi_p)
+        gu = (self.a * gu) + ((1 - self.a) * self.Gu_p.to(self.device))
+        gi = (self.b * gi) + ((1 - self.b) * self.Gi_p.to(self.device))
 
         return gu, gi
 
